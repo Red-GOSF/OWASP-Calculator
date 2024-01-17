@@ -36,47 +36,48 @@
         <section>
           <h5 class="border-bottom" title="The first set of factors are related to the threat agent involved. The goal here is to estimate the likelihood of a successful attack by this group of threat agents. Use the worst-case threat agent.">Threat Agent Factors</h5>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How technically skilled is this group of threat agents?">Skill level</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ทักษะทางด้านเทคนิคของกลุ่มผู้ไม่ประสงค์ดี">Skill level</div>
             <div class="col-8">
               <select class="form-control" id="sl" name="sl" onchange="calculate()">
-                <option value="1">No technical skills (1)</option>
-                <option value="3">Some technical skills (3)</option>
-                <option value="5">Advanced computer user (5)</option>
-                <option value="6">Network and programming skills (6)</option>
-                <option value="9">Security penetration skills (9)</option>
+                <option value="1">ไม่มีทักษะด้านเทคนิค (1)</option>
+                <option value="3">มีทักษะด้านเทคนิคบ้าง (3)</option>
+                <option value="5">มีทักษะด้านคอมพิวเตอร์ขั้นสูง (5)</option>
+                <option value="6">มีทักษะด้านเครือข่ายและโปรแกรมมิ่ง (6)</option>
+                <option value="9">มีทักษะด้านการเจาะระบบความปลอดภัย (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How motivated is this group of threat agents to find and exploit this vulnerability?">Motive</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="แรงจูงใจเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">Motive</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="m" name="m" onchange="calculate()">
-                <option value="1">Low or no reward (1)</option>
-                <option value="4">Possible reward (4)</option>
-                <option value="9">High reward (9)</option>
+                <option value="1">ต่ำหรือไม่ได้สิ่งที่มีมูลค่า (1)</option>
+                <option value="4">มีโอกาสที่จะได้สิ่งที่มีมูลค่า (4)</option>
+                <option value="9">ได้สิ่งที่มีมูลค่าสูง (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="What resources and opportunities are required for this group of threat agents to find and exploit this vulnerability?">Opportunity</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ทรัพยากรและโอกาสที่จำเป็นเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">Opportunity</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="o" name="o" onchange="calculate()">
-                <option value="0">Full access or expensive resources required (0)</option>
-                <option value="4">Special access or resources required (4)</option>
-                <option value="7">Some access or resources required (7)</option>
-                <option value="9">No access or resources required (9)</option>
+                <option value="0">ต้องการการเข้าถึงเต็มรูปแบบหรือใช้ทรัพยากรที่มีมูลค่าสูง (0)</option>
+                <option value="4">ต้องการการเข้าถึงหรือใช้ทรัพยากรลักษณะจำเพาะพิเศษ (4)</option>
+                <option value="7">ต้องการการเข้าถึงหรือใช้ทรัพยากรบางอย่าง (7)</option>
+                <option value="9">ไม่ต้องการการเข้าถึงหรือใช้ทรัพยากร (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How large is this group of threat agents?">Size</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ขนาดของกลุ่มผู้ไม่ประสงค์ดี">Size</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="s" name="s" onchange="calculate()">
-                <option value="2">Developers, System administrators (2)</option>
-                <option value="4">Intranet users (4)</option>
-                <option value="5">Partners (5)</option>
-                <option value="6">Authenticated users (6)</option>
-                <option value="9">Anonymous Internet users (9)</option>
+                <option value="2">กลุ่มผู้ดูแลระบบหรือกลุ่มผู้พัฒนาซอฟต์แวร์ (2)</option>
+                <option value="2">กลุ่มผู้พัฒนาซอฟต์แวร์ (2)</option>
+                <option value="4">กลุ่มผู้ใช้งานระบบจากเครือข่ายภายใน (4)</option>
+                <option value="5">กลุ่มผู้มีส่วนร่วมหรือหุ้นส่วน (5)</option>
+                <option value="6">กลุ่มผู้ได้รับสิทธิ์ในการเข้าใช้งานระบบ (6)</option>
+                <option value="9">กลุ่มผู้ใช้งานอินเทอร์เน็ตทั่วไป (9)</option>
               </select>
             </div>
           </div>
@@ -86,48 +87,48 @@
         <section>
           <h5 class="border-bottom" title="Technical impact can be broken down into factors aligned with the traditional security areas of concern: confidentiality, integrity, availability, and accountability. The goal is to estimate the magnitude of the impact on the system if the vulnerability were to be exploited. ">Technical Impact Factors</h5>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much data could be disclosed and how sensitive is it?">Loss of confidentiality</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ข้อมูลที่ถูกเปิดเผยและความสำคัญของข้อมูล">Loss of confidentiality</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="lc" name="lc" onchange="calculate()">
-                <option value="2">Minimal non-sensitive data disclosed (2)</option>
-                <option value="6">minimal critical data disclosed (6)</option>
-                <option value="6">extensive non-sensitive data disclosed (6)</option>
-                <option value="7">extensive critical data disclosed (7)</option>
-                <option value="9">all data disclosed (9)</option>
+                <option value="2">ข้อมูลที่ไม่สำคัญถูกเปิดเผยเล็กน้อย (2)</option>
+                <option value="6">ข้อมูลที่สำคัญถูกเปิดเผยเล็กน้อย (6)</option>
+                <option value="6">ข้อมูลที่ไม่สำคัญถูกเปิดเผยอย่างมาก (6)</option>
+                <option value="7">ข้อมูลที่สำคัญถูกเปิดเผยอย่างมาก (7)</option>
+                <option value="9">ทุกข้อมูลถูกเปิดเผย (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much data could be corrupted and how damaged is it?">Loss of integrity</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ข้อมูลที่ถูกแก้ไขและความเสียหายของข้อมูล">Loss of integrity</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="li" name="li" onchange="calculate()">
-                <option value="1">Minimal slightly corrupt data (1)</option>
-                <option value="3">Minimal seriously corrupt data (3)</option>
-                <option value="5">Extensive slightly corrupt data (5)</option>
-                <option value="7">Extensive seriously corrupt data (7)</option>
-                <option value="9">All data totally corrupt (9)</option>
+                <option value="1">ข้อมูลที่ไม่สำคัญได้รับความเสียหายเล็กน้อย (1)</option>
+                <option value="3">ข้อมูลที่สำคัญได้รับความเสียหายเล็กน้อย (3)</option>
+                <option value="5">ข้อมูลที่ไม่สำคัญได้รับความเสียหายอย่างมาก (5)</option>
+                <option value="7">ข้อมูลที่สำคัญได้รับความเสียหายอย่างมาก (7)</option>
+                <option value="9">ทุกข้อมูลได้รับความเสียหายทั้งหมด (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much service could be lost and how vital is it?">Loss of availability</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="เซอร์วิสที่ให้บริการถูกหยุดการทำงานและความสำคัญของเซอร์วิส">Loss of availability</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="lav" name="lav" onchange="calculate()">
-                <option value="1">Minimal secondary services interrupted (1)</option>
-                <option value="5">Minimal primary services interrupted (5)</option>
-                <option value="5">Extensive secondary services interrupted (5)</option>
-                <option value="7">Extensive primary services interrupted (7)</option>
-                <option value="9">All services completely lost (9)</option>
+                <option value="1">เซอร์วิสรองถูกขัดขวางเล็กน้อย (1)</option>
+                <option value="5">เซอร์วิสหลักถูกขัดขวางเล็กน้อย (5)</option>
+                <option value="5">เซอร์วิสรองถูกขัดขวางอย่างมาก (5)</option>
+                <option value="7">เซอร์วิสหลักถูกขัดขวางอย่างมาก (7)</option>
+                <option value="9">ทุกเซอร์วิสถูกหยุดการทำงาน (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="Are the threat agents' actions traceable to an individual?">Loss of accountability</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="การกระทำของกลุ่มผู้ไม่ประสงค์ดีสามารถถูกตรวจสอบและย้อนกลับไปหาตัวบุคคล">Loss of accountability</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="lac" name="lac" onchange="calculate()">
-                <option value="1">Fully traceable (1)</option>
-                <option value="7">Possibly traceable (7)</option>
-                <option value="9">Completely anonymous (9)</option>
+                <option value="1">สามารถตรวจสอบและย้อนกลับไปได้ (1)</option>
+                <option value="7">มีความเป็นไปได้ที่จะตรวจสอบและย้อนกลับไปได้ (7)</option>
+                <option value="9">ไม่สามารถระบุตัวตนได้อย่างสมบูรณ์ (9)</option>
               </select>
             </div>
           </div>
@@ -140,46 +141,46 @@
         <section>
           <h5 class="border-bottom" title="The next set of factors are related to the vulnerability involved. The goal here is to estimate the likelihood of the particular vulnerability involved being discovered and exploited. Assume the threat agent selected above.">Vulnerability Factors</h5>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How easy is it for this group of threat agents to discover this vulnerability?">Ease of discovery</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ความยากง่ายที่จะค้นพบช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">Ease of discovery</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="ed" name="ed" onchange="calculate()">
-                <option value="1">Practically impossible (1)</option>
-                <option value="3">Difficult (3)</option>
-                <option value="7">Easy (7)</option>
-                <option value="9">Automated tools available (9)</option>
+                <option value="1">เป็นไปไม่ได้ในเชิงปฏิบัติ (1)</option>
+                <option value="3">มีความยากในการค้นพบ (3)</option>
+                <option value="7">มีความง่ายในการค้นพบ (7)</option>
+                <option value="9">มีเครื่องมืออัตโนมัติในการค้นพบ (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How easy is it for this group of threat agents to actually exploit this vulnerability?">Ease of exploit</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ความยากง่ายที่จะใช้ประโยชน์ของช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">Ease of exploit</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="ee" name="ee" onchange="calculate()">
-                <option value="1">Theoretical (1)</option>
-                <option value="3">Difficult (3)</option>
-                <option value="5">Easy (5)</option>
-                <option value="9">Automated tools available (9)</option>
+                <option value="1">เป็นไปได้ในเชิงทฤษฎี (1)</option>
+                <option value="3">มีความยากในการใช้ประโยชน์ (3)</option>
+                <option value="5">มีความง่ายในการใช้ประโยชน์ (5)</option>
+                <option value="9">มีเครื่องมืออัตโนมัติในการใช้ประโยชน์ (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How well known is this vulnerability to this group of threat agents?">Awareness</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ช่องโหว่เป็นที่รู้จักของกลุ่มผู้ไม่ประสงค์ดี">Awareness</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="a" name="a" onchange="calculate()">
-                <option value="1">Unknown (1)</option>
-                <option value="4">Hidden (4)</option>
-                <option value="6">Obvious (6)</option>
-                <option value="9">Public knowledge (9)</option>
+                <option value="1">ไม่เป็นที่รู้จัก (1)</option>
+                <option value="4">รู้จักในวงแคบ (4)</option>
+                <option value="6">ชัดเจน (6)</option>
+                <option value="9">เป็นที่รู้จัก (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How likely is an exploit to be detected?">Intrusion detection</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="แนวโน้มที่จะถูกตรวจจับจากการนำช่องโหว่ไปใช้ประโยชน์">Intrusion detection</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="id" name="id" onchange="calculate()">
-                <option value="1">Active detection in application (1)</option>
-                <option value="3">Logged and reviewed (3)</option>
-                <option value="8">Logged without review (8)</option>
-                <option value="9">Not logged (9)</option>
+                <option value="1">มีการตรวจจับในแอปพลิเคชัน (1)</option>
+                <option value="3">มีการบันทึกและตรวจทานการกระทำ (3)</option>
+                <option value="8">มีการบันทึกแต่ไม่มีการตรวจทานการกระทำ (8)</option>
+                <option value="9">ไม่มีการบันทึกการกระทำ (9)</option>
               </select>
             </div>
           </div>
@@ -189,45 +190,43 @@
         <section>
           <h5 class="border-bottom" title="The business impact stems from the technical impact, but requires a deep understanding of what is important to the company running the application. In general, you should be aiming to support your risks with business impact, particularly if your audience is executive level. The business risk is what justifies investment in fixing security problems.">Business Impact Factors</h5>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much financial damage will result from an exploit?">Financial damage</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ความเสียหายด้านการเงินที่ส่งผลมาจากการนำช่องโหว่ไปใช้ประโยชน์">Financial damage</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="fd" name="fd" onchange="calculate()">
-                <option value="1">Less than the cost to fix the vulnerability (1)</option>
-                <option value="3">Minor effect on annual profit (3)</option>
-                <option value="7">Significant effect on annual profit (7)</option>
-                <option value="9">Bankruptcy (9)</option>
+                <option value="3">มูลค่าความเสียหายไม่เกิน 1,000,000 บาท (3)</option>
+                <option value="7">มูลค่าความเสียหายไม่เกิน 10,000,000 บาท (7)</option>
+                <option value="9">มูลค่าความเสียหายเกิน 10,000,000 บาท (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="Would an exploit result in reputation damage that would harm the business?">Reputation damage</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="ความเสียหายด้านชื่อเสียงที่จะเป็นอันตรายต่อธุรกิจจากการการนำช่องโหว่ไปใช้ประโยชน์ โดยประเมินจากความสำคัญของชื่อโดเมน">Reputation damage</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="rd" name="rd" onchange="calculate()">
-                <option value="1">Minimal damage (1)</option>
-                <option value="4">Loss of major accounts (4)</option>
-                <option value="5">Loss of goodwill (5)</option>
-                <option value="9">Brand damage (9)</option>
+                <option value="3">Low Risk Domain (3)</option>
+                <option value="5">Medium Risk Domain (5)</option>
+                <option value="9">High Risk Domain (9)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much exposure does non-compliance introduce?">Non-compliance</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="การละเมิดตามข้อกำหนดหรือข้อบังคับต่างๆ">Non-compliance</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="nc" name="nc" onchange="calculate()">
-                <option value="2">Minor violation (2)</option>
-                <option value="5">Clear violation (5)</option>
-                <option value="7">High profile violation (7)</option>
+                <option value="2">การละเมิดข้อกำหนดเล็กน้อย (2)</option>
+                <option value="5">การละเมิดข้อกำหนดที่ชัดเจน (5)</option>
+                <option value="7">การละเมิดข้อกำหนดสูง (7)</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="h6 nomargin col-4 d-flex align-items-center" title="How much personally identifiable information could be disclosed?">Privacy violation</div>
+            <div class="h6 nomargin col-4 d-flex align-items-center" title="จำนวนข้อมูลระบุตัวตนส่วนบุคคลที่ถูกเปิดเผย">Privacy violation</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="pv" name="pv" onchange="calculate()">
-                <option value="3">One individual (3)</option>
-                <option value="5">Hundreds of people (5)</option>
-                <option value="7">Thousands of people (7)</option>
-                <option value="9">Millions of people (9)</option>
+                <option value="3">ข้อมูลส่วนบุคคลถูกเปิดเผยไม่เกิน 500 คน (3)</option>
+                <option value="5">ข้อมูลส่วนบุคคลถูกเปิดเผยไม่เกิน 50,000 คน (5)</option>
+                <option value="7">ข้อมูลส่วนบุคคลถูกเปิดเผยไม่เกิน 100,000 คน (7)</option>
+                <option value="9">ข้อมูลส่วนบุคคลถูกเปิดเผยเกิน 100,000 คน (9)</option>
               </select>
             </div>
           </div>
